@@ -1,4 +1,6 @@
-name: Docker Image CI
+name: Python Application
+
+runs-on: self-hosted
 
 on:
   push:
