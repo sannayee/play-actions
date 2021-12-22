@@ -17,10 +17,10 @@ jobs:
     - name: Install python dependencies
       run: |
         python3 -m pip install --upgrade pip
-        pip3 install -r ./workloads/requirements.txt
+        pip3 install -r ./python/requirements.txt
     - name: Build & Push Image
       run: |
-        cd ./workloads
+        cd ./python
         echo "${{ secrets.DOCKERPW }}" | docker login -u "gsaiprasanna" --password-stdin
         docker image build -t gsaiprasanna/sannayee:python .
         docker push gsaiprasanna/sannayee:python
