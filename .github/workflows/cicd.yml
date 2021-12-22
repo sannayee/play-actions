@@ -1,6 +1,9 @@
 name: Deploy Lambda Function
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
 
