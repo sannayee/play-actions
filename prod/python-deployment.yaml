@@ -26,3 +26,6 @@ spec:
         image: gsaiprasanna/py-flask:v1.0.2
         ports:
         - containerPort: 5000
+        env:
+        - name: API_ENDPOINT
+          value: "https://www.travel-advisory.info/api"
