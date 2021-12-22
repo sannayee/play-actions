@@ -23,6 +23,6 @@ spec:
     spec:
       containers:
       - name: python
-        image: gsaiprasanna/sannayee:python
+        image: gsaiprasanna/py-flask:v1.0.2
         ports:
         - containerPort: 5000
