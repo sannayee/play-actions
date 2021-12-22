@@ -1,10 +1,16 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: python
   labels:
     app: python
-  namespace: python
+  namespace: prod
 spec:
   replicas: 1
   selector:
@@ -17,6 +23,6 @@ spec:
     spec:
       containers:
       - name: python
-        image: gsaiprasanna/py-flask:v1.0.2
+        image: gsaiprasanna/sannayee:python
         ports:
         - containerPort: 5000
